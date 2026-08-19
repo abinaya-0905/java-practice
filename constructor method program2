@@ -1,0 +1,42 @@
+import java.util.Scanner;
+class student
+{
+    String name;
+    int m1,m2,m3;
+    student(String name,int m1,int m2,int m3)
+    {
+        this.name=name;
+        this.m1=m1;
+        this.m2=m2;
+        this.m3=m3;
+    }
+    void display()
+    {
+        int total=m1+m2+m3;
+        double avg=total/3.0;
+        System.out.println("Name: "+name);
+        System.out.println("Marks: "+m1+" "+m2+" "+m3);
+        System.out.println("Total: "+total+"Average: "+avg);
+    }
+}
+public class Main 
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int m1,m2,m3;
+        String name;
+        System.out.println("Enter num of students");
+        int n=sc.nextInt();
+        student[] s=new student[n];
+        for(int i=0;i<n;i++)
+        {
+            System.out.println("Enter details of students"+(i+1));
+            name=sc.nextLine();
+            m1=sc.nextInt();
+            m2=sc.nextInt();
+            m3=sc.nextInt();
+            s[i]=new student(name,m1,m2,m3);
+        }
+    }
+}
