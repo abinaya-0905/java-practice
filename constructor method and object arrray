@@ -1,0 +1,39 @@
+import java.util.Scanner;
+class rect 
+{
+    int a,c;
+    rect(int l,int b)
+    {
+        a=l;
+        c=b;
+    }
+    public void display()
+    {
+    System.out.println("rect"+(a*c));
+    }
+}
+public class Main 
+{
+    public static void main(String[] args)
+    {
+        int l,b;
+        Scanner a=new Scanner(System.in);
+        System.out.println("Enter num of rectangle: ");
+        int n=a.nextInt();
+        rect[] r=new rect[n];
+        for(int i=0;i<n;i++)
+        {
+            System.out.println("Enter length of rect"+(i+1));
+            l=a.nextInt();
+            System.out.println("Enter breadth of rac"+(i+1));
+            b=a.nextInt();
+            r[i]=new rect(l,b);
+        }
+        System.out.println("lets see all area of all rect: ");
+        for(int i=0;i<n;i++)
+        {
+            System.out.print("area of rectangle"+(i+1));
+            r[i].display();
+        }
+    }
+}
