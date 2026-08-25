@@ -1,0 +1,25 @@
+public class Main 
+{
+    public static int abi(int a,int b)
+    {
+        int r;
+        while(b!=0)
+        {
+            r=a%b;
+            a=b;
+            b=r;
+        }
+        return a;
+        
+    }
+    public static void main(String[]args)
+    {
+        int[]a={10,25,60,35,75,15,12};
+        int gcd=a[0];
+        for(int i=1;i<7;i++)
+        {
+            gcd=abi(gcd,a[i]);
+        }
+        System.out.print("The GCD is "+gcd);
+    }
+}
